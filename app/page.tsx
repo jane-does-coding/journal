@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Home() {
 	const total_pages: number = 3;
@@ -8,16 +9,35 @@ export default function Home() {
 	const [displayPage, setDisplayPage] = useState(1);
 	const [isFading, setIsFading] = useState(false);
 
+	useEffect(() => {
+		const images = [
+			"/imgs/journal-first.png",
+			"/imgs/journal-open.png",
+			"/imgs/journal-last.png",
+			"/imgs/pocket-1.png",
+			"/imgs/pocket-2.png",
+			"/imgs/pocket-3.png",
+			"/imgs/back-pocket.png",
+			"/imgs/dollar.png",
+			"/imgs/picture.png",
+		];
+
+		images.forEach((src) => {
+			const img = new Image();
+			img.src = src;
+		});
+	}, []);
+
 	const goToPage = (newPage: number) => {
-		setIsFading(true); // fade OUT text
+		setIsFading(true);
 
 		setTimeout(() => {
-			setPage(newPage); // flip page
+			setPage(newPage);
 
 			setTimeout(() => {
-				setIsFading(false); // fade IN text
-			}, 100); // small delay after flip
-		}, 300); // duration of fade out
+				setIsFading(false);
+			}, 100);
+		}, 300);
 	};
 
 	return (
@@ -42,15 +62,13 @@ export default function Home() {
 					<img
 						src="/imgs/dollar.png"
 						alt=""
-						className="hover:left-[16vw] transition-all duration-250 ease-in-out top-[-3vh] left-[10vw] rotate-90 absolute w-[13vw] drop-shadow-2xl drop-shadow-black"
+						className="hover:left-[15vw] transition-all duration-250 ease-in-out top-[-3vh] left-[10vw] rotate-90 absolute w-[13vw] drop-shadow-2xl drop-shadow-black"
 					/>
 					<img
 						src="/imgs/picture.png"
 						alt=""
-						className="hover:left-[14vw] transition-all duration-250 ease-in-out top-[34vh] left-[7vw] absolute h-[36vh] drop-shadow-xl drop-shadow-black"
+						className="hover:left-[12vw] transition-all duration-250 ease-in-out top-[34vh] left-[7vw] absolute h-[36vh] drop-shadow-xl drop-shadow-black"
 					/>
-					{/* <div className="w-[15vw] h-[18vh] rounded-[0.5vh] bg-green-200 absolute hover:left-[16vw] transition-all duration-250 ease-in-out top-[8vh] left-[12vw]"></div>
-					<div className="w-[13vw] h-[35vh] rounded-[0.5vh] bg-neutral-50 absolute hover:left-[16vw] transition-all duration-250 ease-in-out top-[35vh] left-[12vw]"></div> */}
 					<img
 						rel="preload"
 						src="/imgs/pocket-2.png"
@@ -74,8 +92,6 @@ export default function Home() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
 							>
-								{/* 								<div className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]">
-								 */}{" "}
 								<p className="text-[2.25vh] hand-coffe text-right">
 									04/09/2036
 								</p>
@@ -99,8 +115,6 @@ export default function Home() {
 								>
 									Start {"->"}
 								</button>
-								{/* 								</div>
-								 */}{" "}
 							</motion.div>
 						)}
 					</AnimatePresence>
@@ -124,8 +138,6 @@ export default function Home() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
 							>
-								{/* 								<div className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]">
-								 */}{" "}
 								<p className="text-[2.25vh] hand-coffe text-right">
 									04/09/2036
 								</p>
@@ -149,8 +161,6 @@ export default function Home() {
 								>
 									Next {"->"}
 								</button>
-								{/* 								</div>
-								 */}{" "}
 							</motion.div>
 						)}
 					</AnimatePresence>
@@ -164,8 +174,6 @@ export default function Home() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] left-[9%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
 							>
-								{/* 								<div className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]">
-								 */}{" "}
 								<p className="text-[2.25vh] hand-coffe text-right">
 									04/09/2036
 								</p>
@@ -189,34 +197,9 @@ export default function Home() {
 								>
 									{"<-"} Back
 								</button>
-								{/* 								</div>
-								 */}{" "}
 							</motion.div>
 						)}
 					</AnimatePresence>
-					{/* <div className="absolute top-[5%] left-[9%] h-[90%] w-[36%] py-[1vh] px-[1vw]">
-						<p className="text-[2.25vh] hand-coffe text-right">04/09/2036</p>
-						<h1 className="text-[6vh] hand-coffe text-center text-black/80 mt-[1vh]">
-							The Title
-						</h1>
-						<div className="flex gap-[1vw] mt-[1vh]">
-							<div className="w-1/2 h-auto bg-black/50"></div>
-							<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</p>
-						</div>
-						<p className="text-[2.75vh] hand-coffe mt-[3.5vh]">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, obcaecati. Lorem ipsum dolor sit amet consectetur
-							adipisicing elit.
-						</p>
-						<button
-							onClick={() => setPage(page - 1)}
-							className="absolute left-[2vw] bottom-[2vh] hand-coffe text-[4vh] cursor-pointer"
-						>
-							{"<-"} Back
-						</button>
-					</div> */}
 				</div>
 			)}
 			{page == 3 && (
@@ -246,8 +229,6 @@ export default function Home() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] left-[9%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
 							>
-								{/* 								<div className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]">
-								 */}{" "}
 								<p className="text-[2.25vh] hand-coffe text-right">
 									04/09/2036
 								</p>
@@ -271,34 +252,9 @@ export default function Home() {
 								>
 									{"<-"} Back
 								</button>
-								{/* 								</div>
-								 */}{" "}
 							</motion.div>
 						)}
 					</AnimatePresence>
-					{/* <div className="absolute top-[5%] left-[9%] h-[90%] w-[36%] py-[1vh] px-[1vw]">
-						<p className="text-[2.25vh] hand-coffe text-right">04/09/2036</p>
-						<h1 className="text-[6vh] hand-coffe text-center text-black/80 mt-[1vh]">
-							The Title
-						</h1>
-						<div className="flex gap-[1vw] mt-[1vh]">
-							<div className="w-1/2 h-auto bg-black/50"></div>
-							<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</p>
-						</div>
-						<p className="text-[2.75vh] hand-coffe mt-[3.5vh]">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, obcaecati. Lorem ipsum dolor sit amet consectetur
-							adipisicing elit.
-						</p>
-						<button
-							onClick={() => setPage(page - 1)}
-							className="absolute left-[2vw] bottom-[2vh] hand-coffe text-[4vh] cursor-pointer"
-						>
-							{"<-"} Back
-						</button>
-					</div> */}
 				</div>
 			)}
 		</div>
