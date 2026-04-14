@@ -5,6 +5,10 @@
 	src: url("/fonts/hand-coffe-font/HandCoffe.otf") format("opentype");
 }
 
+button {
+	cursor: pointer;
+}
+
 .hand-coffe {
 	font-family: "hand-coffe", sans-serif;
 }
