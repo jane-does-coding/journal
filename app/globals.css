@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
+button {
+	cursor: pointer;
+}
+
 @font-face {
 	font-family: "hand-coffe";
 	src: url("/fonts/hand-coffe-font/HandCoffe.otf") format("opentype");
 }
 
-button {
-	cursor: pointer;
-}
-
 .hand-coffe {
 	font-family: "hand-coffe", sans-serif;
+}
+
+@font-face {
+	font-family: "scribble-box";
+	src: url("/fonts/scribble-box-font/ScribbleBox.ttf") format("truetype");
+}
+
+.scribble-box {
+	font-family: "scribble-box", sans-serif;
 }

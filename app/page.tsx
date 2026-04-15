@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Home() {
 	const total_pages: number = 3;
 	const [page, setPage] = useState(1);
-	const [displayPage, setDisplayPage] = useState(1);
+	const [selectedItem, setSelectedItem] = useState<string | null>("picture");
 	const [isFading, setIsFading] = useState(false);
 
 	useEffect(() => {
@@ -56,50 +56,83 @@ export default function Home() {
 					<img
 						rel="preload"
 						src="/imgs/pocket-3.png"
-						className="w-[26vw] absolute top-0 left-0"
+						className="w-[26vw] absolute top-0 left-0 z-1"
 						alt=""
 					/>
+					<p
+						className={`px-[2.5vw] py-[1.5vh] pt-[2.5vh] bg-neutral-50 w-fit transition-all ease-in-out duration-350 absolute z-3 scribble-box text-[4vh] leading-[4vh] border-dashed border-2 ${
+							selectedItem === "dollar"
+								? "left-[33%] top-[10%] rotate-0 w-[17vw] hover:scale-[98%] delay-200"
+								: "rotate-90 left-[5vw] w-[13vw] top-[20vh]"
+						}`}
+					>
+						5 Dollars
+					</p>
 					<img
 						src="/imgs/dollar.png"
 						alt=""
-						className="hover:left-[15vw] transition-all duration-250 ease-in-out top-[-3vh] left-[10vw] rotate-90 absolute w-[13vw] drop-shadow-2xl drop-shadow-black"
+						onClick={() =>
+							setSelectedItem(selectedItem == "dollar" ? null : "dollar")
+						}
+						className={` transition-all duration-350 ease-in-out absolute drop-shadow-2xl drop-shadow-black z-2 cursor-pointer ${
+							selectedItem === "dollar"
+								? "left-[40%] top-[15%] rotate-0 w-[18vw] hover:scale-[98%]"
+								: "rotate-90 left-[10vw] hover:left-[15vw] w-[13vw] top-[-3vh] "
+						}`}
 					/>
+					<p
+						className={`px-[2.5vw] py-[1.5vh] pt-[2.5vh] bg-neutral-50 w-fit transition-all ease-in-out duration-350 absolute z-7 scribble-box text-[4vh] leading-[4vh] border-dashed border-2 ${
+							selectedItem === "picture"
+								? "left-[25%] top-[13%] rotate-0 w-[17vw] hover:scale-[98%] delay-200"
+								: "rotate-90 left-[-7vw] w-[13vw] top-[38vh]"
+						}`}
+					>
+						Cloudy Sky
+					</p>
 					<img
 						src="/imgs/picture.png"
 						alt=""
-						className="hover:left-[12vw] transition-all duration-250 ease-in-out top-[34vh] left-[7vw] absolute h-[36vh] drop-shadow-xl drop-shadow-black"
+						onClick={() =>
+							setSelectedItem(selectedItem == "picture" ? null : "picture")
+						}
+						className={`transition-all duration-350 ease-in-out absolute drop-shadow-xl drop-shadow-black z-6 cursor-pointer ${
+							selectedItem === "picture"
+								? "left-[33%] top-[20%] rotate-0 hover:scale-[98%] h-[48vh]"
+								: "rotate-90 top-[23vh] left-[1vw] hover:left-[5vw] h-[36vh]"
+						}`}
 					/>
 					<img
 						rel="preload"
 						src="/imgs/pocket-2.png"
-						className="w-[16.9vw] absolute top-0 left-0"
+						className="w-[16.9vw] absolute top-0 left-0 z-5"
 						alt=""
 					/>
-					<div className="w-[13vw] h-[40vh] rounded-[1vh] bg-blue-200 absolute hover:left-[6vw] transition-all duration-250 ease-in-out top-[15vh] left-[2vw]"></div>
+					{/* 					<div className="w-[13vw] h-[40vh] rounded-[1vh] bg-blue-200 absolute hover:left-[6vw] transition-all duration-250 ease-in-out top-[15vh] left-[2vw] z-6"></div>
+					 */}{" "}
 					<img
 						rel="preload"
 						src="/imgs/pocket-1.png"
-						className="w-[8vw] absolute top-0 left-0"
+						className="w-[8vw] absolute top-0 left-0 z-9"
 						alt=""
 					/>
 					<AnimatePresence mode="wait">
 						{!isFading && (
 							<motion.div
-								key={displayPage}
+								key={page}
 								initial={{ opacity: 0, y: 5 }}
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
+								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw] z-0"
 							>
 								<p className="text-[2.25vh] hand-coffe text-right">
 									04/09/2036
 								</p>
-								<h1 className="text-[6vh] hand-coffe text-center text-black/80 mt-[1vh]">
+								<h1 className="text-[6vh] scribble-box text-center text-black/80 mt-[1vh]">
 									The Title
 								</h1>
 								<div className="flex gap-[1vw] mt-[1vh]">
-									<div className="w-1/2 h-auto bg-black/50"></div>
+									<div className="w-1/2 h-auto bg-black/50  relative z-[0]"></div>
 									<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									</p>
@@ -131,7 +164,7 @@ export default function Home() {
 					<AnimatePresence mode="wait">
 						{!isFading && (
 							<motion.div
-								key={displayPage}
+								key={page}
 								initial={{ opacity: 0, y: 5 }}
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
@@ -167,7 +200,7 @@ export default function Home() {
 					<AnimatePresence mode="wait">
 						{!isFading && (
 							<motion.div
-								key={displayPage}
+								key={page}
 								initial={{ opacity: 0, y: 5 }}
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
@@ -222,7 +255,7 @@ export default function Home() {
 					<AnimatePresence mode="wait">
 						{!isFading && (
 							<motion.div
-								key={displayPage}
+								key={page}
 								initial={{ opacity: 0, y: 5 }}
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
