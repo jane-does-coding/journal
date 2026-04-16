@@ -257,92 +257,92 @@ export default function Home() {
 									<p className="text-[2vh] hand-coffe text-left">Page 2</p>
 									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
 								</div>
-								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1.5vh]">
+								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
 									Table of Contents
 								</h1>
 
-								<div className="flex flex-col px-[1vw]">
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh]">
+								<div className="flex flex-col px-[1vw] mt-[1vh]">
+									{/* <div className="flex items-center justify-between border-b border-black/40 py-[0.5vh]">
 										<p className="hand-coffe text-[2.25vh]">Content</p>
 										<p className="hand-coffe text-[2.25vh]">Page</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center">
+									</div> */}
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center">
 											The new Beginning
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw]">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw]">
 											01
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center">
 											Table of Contents
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw]">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw]">
 											02
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center">
 											Calendar
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw]">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw]">
 											03
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											04
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											05
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											06
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											07
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center  blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center  blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											08
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											09
 										</p>
 									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
 											10
 										</p>
 									</div>
