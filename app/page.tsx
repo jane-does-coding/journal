@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Home() {
 	const total_pages: number = 3;
 	const [page, setPage] = useState(1);
-	const [selectedItem, setSelectedItem] = useState<string | null>("picture");
+	const [selectedItem, setSelectedItem] = useState<string | null>(null);
 	const [isFading, setIsFading] = useState(false);
 
 	useEffect(() => {
@@ -63,7 +63,7 @@ export default function Home() {
 						className={`px-[2.5vw] py-[1.5vh] pt-[2.5vh] bg-neutral-50 w-fit transition-all ease-in-out duration-350 absolute z-3 scribble-box text-[4vh] leading-[4vh] border-dashed border-2 ${
 							selectedItem === "dollar"
 								? "left-[33%] top-[10%] rotate-0 w-[17vw] hover:scale-[98%] delay-200"
-								: "rotate-90 left-[5vw] w-[13vw] top-[20vh]"
+								: "rotate-90  left-[5vw] w-[13vw] top-[20vh]"
 						}`}
 					>
 						5 Dollars
@@ -77,14 +77,14 @@ export default function Home() {
 						className={` transition-all duration-350 ease-in-out absolute drop-shadow-2xl drop-shadow-black z-2 cursor-pointer ${
 							selectedItem === "dollar"
 								? "left-[40%] top-[15%] rotate-0 w-[18vw] hover:scale-[98%]"
-								: "rotate-90 left-[10vw] hover:left-[15vw] w-[13vw] top-[-3vh] "
+								: "rotate-90  left-[10vw] hover:left-[15vw] w-[13vw] top-[-3vh] "
 						}`}
 					/>
 					<p
 						className={`px-[2.5vw] py-[1.5vh] pt-[2.5vh] bg-neutral-50 w-fit transition-all ease-in-out duration-350 absolute z-7 scribble-box text-[4vh] leading-[4vh] border-dashed border-2 ${
 							selectedItem === "picture"
 								? "left-[25%] top-[13%] rotate-0 w-[17vw] hover:scale-[98%] delay-200"
-								: "rotate-90 left-[-7vw] w-[13vw] top-[38vh]"
+								: "rotate-90  left-[-7vw] w-[13vw] top-[38vh]"
 						}`}
 					>
 						Cloudy Sky
@@ -98,7 +98,7 @@ export default function Home() {
 						className={`transition-all duration-350 ease-in-out absolute drop-shadow-xl drop-shadow-black z-6 cursor-pointer ${
 							selectedItem === "picture"
 								? "left-[33%] top-[20%] rotate-0 hover:scale-[98%] h-[48vh]"
-								: "rotate-90 top-[23vh] left-[1vw] hover:left-[5vw] h-[36vh]"
+								: "rotate-90  top-[23vh] left-[1vw] hover:left-[5vw] h-[36vh]"
 						}`}
 					/>
 					<img
@@ -123,24 +123,28 @@ export default function Home() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw] z-0"
+								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[0.5vw] z-0"
 							>
 								<p className="text-[2.25vh] hand-coffe text-right">
 									04/09/2036
 								</p>
-								<h1 className="text-[6vh] scribble-box text-center text-black/80 mt-[1vh]">
-									The Title
+								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
+									The New Beginning
 								</h1>
 								<div className="flex gap-[1vw] mt-[1vh]">
-									<div className="w-1/2 h-auto bg-black/50  relative z-[0]"></div>
-									<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									<img
+										src="/imgs/memories.png"
+										className="min-w-[13vw] w-[13vw] h-[30vh]"
+										alt=""
+									/>
+									<p className="hand-coffe text-[2.6vh] font-extralight w-full text-left">
+										Today, I'm starting a new life, the life where I can be
+										myself, the life where I can be free.
 									</p>
 								</div>
-								<p className="text-[2.75vh] hand-coffe mt-[3.5vh]">
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-									Provident, obcaecati. Lorem ipsum dolor sit amet consectetur
-									adipisicing elit.
+								<p className="text-[2.6vh] hand-coffe mt-[2vh] px-[1.75vw]">
+									I'm leaving everything behind, all the memories, and starting
+									from a blank page.
 								</p>
 								<button
 									onClick={() => goToPage(page + 1)}
@@ -178,7 +182,7 @@ export default function Home() {
 									The Title
 								</h1>
 								<div className="flex gap-[1vw] mt-[1vh]">
-									<div className="w-1/2 h-auto bg-black/50"></div>
+									<img src="/imgs/memories.png" alt="" />
 									<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit.
 									</p>
