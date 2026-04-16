@@ -138,12 +138,12 @@ export default function Home() {
 										className="min-w-[13vw] w-[13vw] h-[30vh]"
 										alt=""
 									/>
-									<p className="hand-coffe text-[2.6vh] font-extralight w-full text-left">
+									<p className="hand-coffe text-black/80 text-[2.6vh] font-extralight w-full text-left">
 										Today, I'm starting a new life, the life where I can be
 										myself, the life where I can be free.
 									</p>
 								</div>
-								<p className="text-[2.6vh] hand-coffe mt-[2vh] px-[1.75vw]">
+								<p className="text-[2.6vh] hand-coffe text-black/80 mt-[2vh] px-[1.75vw]">
 									I'm leaving everything behind, all the memories, and starting
 									from a blank page.
 								</p>
@@ -183,13 +183,13 @@ export default function Home() {
 								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
 									Calendar
 								</h1>
-								<div className="w-full h-[52vh] mt-[1vh] border border-dashed flex flex-col">
-									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+								<div className="w-full h-[52vh] mt-[1vh] border border-dashed grid grid-cols-2">
+									<div className="border-b border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
 										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
 											Monday
 										</p>
 										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Lorem, ipsum dolor sit amet consectetur.
+											Job Interview
 										</p>
 									</div>
 									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
@@ -197,15 +197,15 @@ export default function Home() {
 											Tuesday
 										</p>
 										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Lorem, ipsum dolor sit amet consectetur.
+											Volunteering at the animal shelter
 										</p>
 									</div>
-									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+									<div className="border-b border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
 										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
 											Wednesday
 										</p>
 										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Lorem, ipsum dolor sit amet consectetur.
+											-
 										</p>
 									</div>
 									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
@@ -213,15 +213,15 @@ export default function Home() {
 											Thursday
 										</p>
 										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Lorem, ipsum dolor sit amet consectetur.
+											Talk with a Client
 										</p>
 									</div>
-									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+									<div className="border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
 										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
 											Friday
 										</p>
 										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Lorem, ipsum dolor sit amet consectetur.
+											Website Design
 										</p>
 									</div>
 									<div className="w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
@@ -229,7 +229,7 @@ export default function Home() {
 											Saturday - Sunday
 										</p>
 										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Lorem, ipsum dolor sit amet consectetur.
+											-
 										</p>
 									</div>
 								</div>
