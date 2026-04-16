@@ -123,15 +123,16 @@ export default function Home() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[0.5vw] z-0"
+								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[0vh] px-[0.5vw] z-0"
 							>
-								<p className="text-[2.25vh] hand-coffe text-right">
-									04/09/2036
-								</p>
-								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
+								<div className="flex items-center justify-between">
+									<p className="text-[2vh] hand-coffe text-left">Page 1</p>
+									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
+								</div>
+								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1.5vh]">
 									The New Beginning
 								</h1>
-								<div className="flex gap-[1vw] mt-[1vh]">
+								<div className="flex gap-[1vw] mt-[1.5vh]">
 									<img
 										src="/imgs/memories.png"
 										className="min-w-[13vw] w-[13vw] h-[30vh]"
@@ -173,25 +174,66 @@ export default function Home() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
+								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[0vh] px-[1vw] z-0"
 							>
-								<p className="text-[2.25vh] hand-coffe text-right">
-									04/09/2036
-								</p>
-								<h1 className="text-[6vh] hand-coffe text-center text-black/80 mt-[1vh]">
-									The Title
-								</h1>
-								<div className="flex gap-[1vw] mt-[1vh]">
-									<img src="/imgs/memories.png" alt="" />
-									<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									</p>
+								<div className="flex items-center justify-between">
+									<p className="text-[2vh] hand-coffe text-left">Page 3</p>
+									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
 								</div>
-								<p className="text-[2.75vh] hand-coffe mt-[3.5vh]">
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-									Provident, obcaecati. Lorem ipsum dolor sit amet consectetur
-									adipisicing elit.
-								</p>
+								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
+									Calendar
+								</h1>
+								<div className="w-full h-[52vh] mt-[1vh] border border-dashed flex flex-col">
+									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
+											Monday
+										</p>
+										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+											Lorem, ipsum dolor sit amet consectetur.
+										</p>
+									</div>
+									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
+											Tuesday
+										</p>
+										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+											Lorem, ipsum dolor sit amet consectetur.
+										</p>
+									</div>
+									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
+											Wednesday
+										</p>
+										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+											Lorem, ipsum dolor sit amet consectetur.
+										</p>
+									</div>
+									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
+											Thursday
+										</p>
+										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+											Lorem, ipsum dolor sit amet consectetur.
+										</p>
+									</div>
+									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
+											Friday
+										</p>
+										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+											Lorem, ipsum dolor sit amet consectetur.
+										</p>
+									</div>
+									<div className="w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
+										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
+											Saturday - Sunday
+										</p>
+										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+											Lorem, ipsum dolor sit amet consectetur.
+										</p>
+									</div>
+								</div>
+
 								<button
 									onClick={() => goToPage(page + 1)}
 									className="absolute right-[2vw] bottom-[2vh] hand-coffe text-[4vh] cursor-pointer"
@@ -209,25 +251,118 @@ export default function Home() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] left-[9%] h-[90%] w-[36%] py-[1vh] px-[1vw]"
+								className="absolute top-[5%] left-[9%] h-[90%] w-[38%] py-[0vh] px-[1vw]"
 							>
-								<p className="text-[2.25vh] hand-coffe text-right">
-									04/09/2036
-								</p>
-								<h1 className="text-[6vh] hand-coffe text-center text-black/80 mt-[1vh]">
-									The Title
-								</h1>
-								<div className="flex gap-[1vw] mt-[1vh]">
-									<div className="w-1/2 h-auto bg-black/50"></div>
-									<p className="hand-coffe text-[2.75vh] w-1/2 text-right">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									</p>
+								<div className="flex items-center justify-between">
+									<p className="text-[2vh] hand-coffe text-left">Page 2</p>
+									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
 								</div>
-								<p className="text-[2.75vh] hand-coffe mt-[3.5vh]">
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-									Provident, obcaecati. Lorem ipsum dolor sit amet consectetur
-									adipisicing elit.
-								</p>
+								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1.5vh]">
+									Table of Contents
+								</h1>
+
+								<div className="flex flex-col px-[1vw]">
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh]">
+										<p className="hand-coffe text-[2.25vh]">Content</p>
+										<p className="hand-coffe text-[2.25vh]">Page</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center">
+											The new Beginning
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw]">
+											01
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center">
+											Table of Contents
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw]">
+											02
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center">
+											Calendar
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw]">
+											03
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											04
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											05
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											06
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											07
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center  blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											08
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											09
+										</p>
+									</div>
+									<div className="flex items-center justify-between border-b border-black/40 py-[0.25vh] ">
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center blur-[0.5px] opacity-30">
+											xxxxxxxxxx
+										</p>
+										<p className="hand-coffe text-[2.5vh] leading-[3.5vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+											10
+										</p>
+									</div>
+								</div>
+
+								<img
+									src="/imgs/spiral.png"
+									className="absolute bottom-[3.5vh] right-[2vw] w-[3vw]"
+									alt=""
+								/>
+								<img
+									src="/imgs/star1.png"
+									className="absolute bottom-[8vh] right-[4vw] w-[3vw]"
+									alt=""
+								/>
+								<img
+									src="/imgs/frown.png"
+									className="absolute bottom-[2vh] right-[6vw] w-[2.5vw]"
+									alt=""
+								/>
 								<button
 									onClick={() => goToPage(page - 1)}
 									className="absolute left-[2vw] bottom-[2vh] hand-coffe text-[4vh] cursor-pointer"
