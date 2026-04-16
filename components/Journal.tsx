@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, delay } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Journal() {
@@ -38,6 +38,30 @@ export default function Journal() {
 				setIsFading(false);
 			}, 100);
 		}, 300);
+	};
+
+	const container = {
+		hidden: {},
+		show: {
+			transition: {
+				staggerChildren: 0.1,
+			},
+		},
+	};
+
+	const item = {
+		hidden: {
+			opacity: 0,
+			y: 10,
+		},
+		show: {
+			opacity: 1,
+			y: 0,
+			x: 0,
+			transition: {
+				duration: 0.35,
+			},
+		},
 	};
 
 	return (
@@ -122,28 +146,55 @@ export default function Journal() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[0vh] px-[0.5vw] z-0"
 							>
-								<div className="flex items-center justify-between">
-									<p className="text-[2vh] hand-coffe text-left">Page 1</p>
-									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
-								</div>
-								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1.5vh]">
-									The New Beginning
-								</h1>
-								<div className="flex gap-[1vw] mt-[1.5vh]">
-									<img
-										src="/imgs/memories.png"
-										className="min-w-[13vw] w-[13vw] h-[30vh]"
-										alt=""
-									/>
-									<p className="hand-coffe text-black/80 text-[2.6vh] font-extralight w-full text-left">
-										Today, I'm starting a new life, the life where I can be
-										myself, the life where I can be free.
-									</p>
-								</div>
-								<p className="text-[2.6vh] hand-coffe text-black/80 mt-[2vh] px-[1.75vw]">
-									I'm leaving everything behind, all the memories, and starting
-									from a blank page.
-								</p>
+								<motion.div
+									className="flex flex-col px-[1vw] mt-[1vh]"
+									variants={container}
+									initial="hidden"
+									animate="show"
+								>
+									<div className="flex items-center justify-between">
+										<motion.p
+											variants={item}
+											className="text-[2vh] hand-coffe text-left"
+										>
+											Page 1
+										</motion.p>
+										<motion.p
+											variants={item}
+											className="text-[2vh] hand-coffe text-left"
+										>
+											04/09/2036
+										</motion.p>
+									</div>
+									<motion.h1
+										variants={item}
+										className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1.5vh]"
+									>
+										The New Beginning
+									</motion.h1>
+									<div className="flex gap-[1vw] mt-[1.5vh]">
+										<motion.img
+											variants={item}
+											src="/imgs/memories.png"
+											className="min-w-[13vw] w-[13vw] h-[30vh]"
+											alt=""
+										/>
+										<motion.p
+											variants={item}
+											className="hand-coffe text-black/80 text-[2.6vh] font-extralight w-full text-left"
+										>
+											Today, I'm starting a new life, the life where I can be
+											myself, the life where I can be free.
+										</motion.p>
+									</div>
+									<motion.p
+										variants={item}
+										className="text-[2.6vh] hand-coffe text-black/80 mt-[2vh] px-[1.75vw]"
+									>
+										I'm leaving everything behind, all the memories, and
+										starting from a blank page.
+									</motion.p>
+								</motion.div>
 								<button
 									onClick={() => goToPage(page + 1)}
 									className="absolute right-[2vw] bottom-[2vh] hand-coffe text-[4vh] cursor-pointer"
@@ -173,63 +224,101 @@ export default function Journal() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[0vh] px-[1vw] z-0"
 							>
-								<div className="flex items-center justify-between">
-									<p className="text-[2vh] hand-coffe text-left">Page 3</p>
-									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
-								</div>
-								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
-									Calendar
-								</h1>
-								<div className="w-full h-[52vh] mt-[1vh] border border-dashed grid grid-cols-2">
-									<div className="border-b border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
-										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
-											Monday
-										</p>
-										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Job Interview
-										</p>
+								<motion.div
+									className="flex flex-col px-[1vw] mt-[1vh]"
+									variants={container}
+									initial="hidden"
+									animate="show"
+								>
+									<div className="flex items-center justify-between">
+										<motion.p
+											variants={item}
+											className="text-[2vh] hand-coffe text-left"
+										>
+											Page 3
+										</motion.p>
+										<motion.p
+											variants={item}
+											className="text-[2vh] hand-coffe text-left"
+										>
+											04/09/2036
+										</motion.p>
 									</div>
-									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
-										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
-											Tuesday
-										</p>
-										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Volunteering at the animal shelter
-										</p>
+									<motion.h1
+										variants={item}
+										className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]"
+									>
+										Calendar
+									</motion.h1>
+									<div className="w-full h-[52vh] mt-[1vh] border border-dashed grid grid-cols-2">
+										<motion.div
+											className="border-b border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0"
+											variants={item}
+										>
+											<p className="text-[2vh] border-r border-b border-dashed w-fit px-[0.5vw] py-[0.25vh] font-extrabold hand-coffe leading-[2.5vh]">
+												Monday
+											</p>
+											<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+												Job Interview
+											</p>
+										</motion.div>
+										<motion.div
+											className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0"
+											variants={item}
+										>
+											<p className="text-[2vh] border-r border-b border-dashed w-fit px-[0.5vw] py-[0.25vh] font-extrabold hand-coffe leading-[2.5vh]">
+												Tuesday
+											</p>
+											<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+												Volunteering at the animal shelter
+											</p>
+										</motion.div>
+										<motion.div
+											className="border-b border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0"
+											variants={item}
+										>
+											<p className="text-[2vh] border-r border-b border-dashed w-fit px-[0.5vw] py-[0.25vh] font-extrabold hand-coffe leading-[2.5vh]">
+												Wednesday
+											</p>
+											<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+												-
+											</p>
+										</motion.div>
+										<motion.div
+											className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0"
+											variants={item}
+										>
+											<p className="text-[2vh] border-r border-b border-dashed w-fit px-[0.5vw] py-[0.25vh] font-extrabold hand-coffe leading-[2.5vh]">
+												Thursday
+											</p>
+											<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+												Talk with a Client
+											</p>
+										</motion.div>
+										<motion.div
+											className="border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0"
+											variants={item}
+										>
+											<p className="text-[2vh] border-r border-b border-dashed w-fit px-[0.5vw] py-[0.25vh] font-extrabold hand-coffe leading-[2.5vh]">
+												Friday
+											</p>
+											<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+												Website Design
+											</p>
+										</motion.div>
+										<motion.div
+											className="w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0"
+											variants={item}
+										>
+											<p className="text-[2vh] border-r border-b border-dashed w-fit px-[0.5vw] py-[0.25vh] font-extrabold hand-coffe leading-[2.5vh]">
+												Saturday - Sunday
+											</p>
+											<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
+												-
+											</p>
+										</motion.div>
 									</div>
-									<div className="border-b border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
-										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
-											Wednesday
-										</p>
-										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											-
-										</p>
-									</div>
-									<div className="border-b border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
-										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
-											Thursday
-										</p>
-										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Talk with a Client
-										</p>
-									</div>
-									<div className="border-r border-dashed w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
-										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
-											Friday
-										</p>
-										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											Website Design
-										</p>
-									</div>
-									<div className="w-full h-full px-[0.75vw] py-[0.75vh] pt-0 pl-0">
-										<p className="text-[1.75vh] border-r border-b border-dashed w-fit px-[0.35vw] py-[0.25vh] font-extrabold hand-coffe leading-[2vh]">
-											Saturday - Sunday
-										</p>
-										<p className="text-[2vh] hand-coffe leading-[3vh] pl-[1vw] mt-[1vh]">
-											-
-										</p>
-									</div>
-								</div>
+								</motion.div>
 
 								<button
 									onClick={() => goToPage(page + 1)}
@@ -250,116 +339,167 @@ export default function Journal() {
 								transition={{ duration: 0.3 }}
 								className="absolute top-[5%] left-[9%] h-[90%] w-[38%] py-[0vh] px-[1vw]"
 							>
-								<div className="flex items-center justify-between">
-									<p className="text-[2vh] hand-coffe text-left">Page 2</p>
-									<p className="text-[2vh] hand-coffe text-left">04/09/2036</p>
-								</div>
-								<h1 className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]">
-									Table of Contents
-								</h1>
+								<motion.div
+									className="flex flex-col px-[1vw] mt-[1vh]"
+									variants={container}
+									initial="hidden"
+									animate="show"
+								>
+									<div className="flex items-center justify-between">
+										<motion.p
+											variants={item}
+											className="text-[2vh] hand-coffe text-left"
+										>
+											Page 2
+										</motion.p>
+										<motion.p
+											variants={item}
+											className="text-[2vh] hand-coffe text-left"
+										>
+											04/09/2036
+										</motion.p>
+									</div>
+									<motion.h1
+										variants={item}
+										className="text-[5vh] leading-[5vh] scribble-box text-center text-black/80 mt-[1vh]"
+									>
+										Table of Contents
+									</motion.h1>
 
-								<div className="flex flex-col px-[1vw] mt-[1vh]">
 									{/* <div className="flex items-center justify-between border-b border-black/40 py-[0.5vh]">
 										<p className="hand-coffe text-[2.25vh]">Content</p>
 										<p className="hand-coffe text-[2.25vh]">Page</p>
 									</div> */}
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center">
 											The new Beginning
 										</p>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw]">
 											01
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center">
 											Table of Contents
 										</p>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw]">
 											02
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center">
 											Calendar
 										</p>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw]">
 											03
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-20">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											04
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-20">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											05
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-20">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											06
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-20">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											07
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
 										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center  blur-[0.5px] opacity-30">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											08
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-20">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											09
 										</p>
-									</div>
-									<div className="flex items-center justify-between border-b border-black/40 py-[0.5vh] ">
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-30">
+									</motion.div>
+									<motion.div
+										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
+										variants={item}
+									>
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center blur-[0.5px] opacity-20">
 											xxxxxxxxxx
 										</p>
-										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-30">
+										<p className="hand-coffe text-[2.3vh] leading-[3vh] text-center w-[2vw] blur-[0.5px] opacity-20">
 											10
 										</p>
-									</div>
-								</div>
+									</motion.div>
 
-								<img
-									src="/imgs/spiral.png"
-									className="absolute bottom-[3.5vh] right-[2vw] w-[3vw]"
-									alt=""
-								/>
-								<img
-									src="/imgs/star1.png"
-									className="absolute bottom-[8vh] right-[4vw] w-[3vw]"
-									alt=""
-								/>
-								<img
-									src="/imgs/frown.png"
-									className="absolute bottom-[2vh] right-[6vw] w-[2.5vw]"
-									alt=""
-								/>
+									<motion.img
+										variants={item}
+										src="/imgs/spiral.png"
+										className="absolute bottom-[3.5vh] right-[2vw] w-[2.75vw]"
+										alt=""
+									/>
+									<motion.img
+										variants={item}
+										src="/imgs/star1.png"
+										className="absolute bottom-[7vh] right-[4vw] w-[2.75vw]"
+										alt=""
+									/>
+									<motion.img
+										variants={item}
+										src="/imgs/frown.png"
+										className="absolute bottom-[2vh] right-[6vw] w-[2.5vw]"
+										alt=""
+									/>
+								</motion.div>
 								<button
 									onClick={() => goToPage(page - 1)}
 									className="absolute left-[2vw] bottom-[2vh] hand-coffe text-[4vh] cursor-pointer"
