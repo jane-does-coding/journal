@@ -47,11 +47,8 @@ export default function Home() {
 		<div className="bg-black h-screen w-full">
 			<div className="h-screen w-screen bg-black relative overflow-x-hidden overflow-y-hidden">
 				<div className="bg-yellow-900/15 w-screen h-screen"></div>
-				{/* <Journal /> */}
+				<Journal />
 				<FAQ />
-				<button className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vw] hand-coffe text-[5vh] leading-[5vh]">
-					?
-				</button>
 			</div>
 		</div>
 	);
