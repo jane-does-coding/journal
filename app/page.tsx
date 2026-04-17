@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Journal from "@/components/Journal";
-import Chain from "@/components/Chain";
 import FAQ from "@/components/FAQ";
 
 export default function Home() {
@@ -30,18 +28,6 @@ export default function Home() {
 			img.src = src;
 		});
 	}, []);
-
-	const goToPage = (newPage: number) => {
-		setIsFading(true);
-
-		setTimeout(() => {
-			setPage(newPage);
-
-			setTimeout(() => {
-				setIsFading(false);
-			}, 100);
-		}, 300);
-	};
 
 	return (
 		<div className="bg-black h-screen w-full">

@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence, delay } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Journal() {
-	const total_pages: number = 3;
 	const [page, setPage] = useState(1);
 	const [selectedItem, setSelectedItem] = useState<string | null>(null);
 	const [isFading, setIsFading] = useState(false);
@@ -144,7 +143,7 @@ export default function Journal() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[0vh] px-[0.5vw] z-0"
+								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-0 px-[0.5vw] z-0"
 							>
 								<motion.div
 									className="flex flex-col px-[1vw] mt-[1vh]"
@@ -222,7 +221,7 @@ export default function Journal() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-[0vh] px-[1vw] z-0"
+								className="absolute top-[5%] right-[12%] h-[90%] w-[36%] py-0 px-[1vw] z-0"
 							>
 								<motion.div
 									className="flex flex-col px-[1vw] mt-[1vh]"
@@ -337,7 +336,7 @@ export default function Journal() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -5 }}
 								transition={{ duration: 0.3 }}
-								className="absolute top-[5%] left-[9%] h-[90%] w-[38%] py-[0vh] px-[1vw]"
+								className="absolute top-[5%] left-[9%] h-[90%] w-[38%] py-0 px-[1vw]"
 							>
 								<motion.div
 									className="flex flex-col px-[1vw] mt-[1vh]"

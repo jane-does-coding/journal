@@ -12,13 +12,13 @@ export default function FAQ() {
 		<div className="">
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vw] hand-coffe text-[5vh] leading-[5vh] z-99"
+				className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vh] hand-coffe text-[5vh] leading-[5vh] z-99"
 			>
 				?
 			</button>
 			{isOpen && (
 				<div className="w-full h-screen absolute top-0 left-0 bg-neutral-900/10 backdrop-blur-[3px]">
-					<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] flex flex-col items-center justify-center gap-[0vh]">
+					<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] flex flex-col items-center justify-center gap-0">
 						<div className="border-dashed border-2 bg-amber-50 h-fit w-full flex flex-col">
 							<div className="flex border-b-2 border-dashed py-[1.5vh] px-[1vw] gap-[1vw] items-center justify-center">
 								<p className="hand-coffe text-[2.25vh]">3/10</p>
@@ -64,17 +64,7 @@ export default function FAQ() {
 						<div className="border-dashed border-2 bg-amber-50 h-[55vh] w-full">
 							<div className="flex w-full h-full items-center justify-center">
 								{currentTab === "objective" ? (
-									<div className="w-2/3 border-r-2 border-dashed h-full flex flex-col pt-[0vh]">
-										{/* <div className="py-[1vh] hover:h-[26vh] h-[7vh] border-b-2 border-dashed overflow-hidden duration-400 transition-all ease-in-out">
-									<p className="text-[2.5vh] hand-coffe px-[1vw] py-[0.75vh] text-left ">
-										Previous Tasks
-									</p>
-									<p className="hand-coffe text-[2.5vh] px-[2vw] mt-[1vh]">
-										Click on the person in the stand to chat with them, and then
-										use the 5 dollars you have in your wallet to purchase the
-										newspaper.
-									</p>
-								</div> */}
+									<div className="w-2/3 border-r-2 border-dashed h-full flex flex-col pt-0">
 										<h3 className="scribble-box text-[4vh] px-[2vw] mt-[2vh] border-b-2 border-dashed mb-[1vh]">
 											Current Objective
 										</h3>
@@ -96,7 +86,7 @@ export default function FAQ() {
 										</div>
 									</div>
 								) : (
-									<div className="w-2/3 border-r-2 border-dashed h-full flex flex-col pt-[0vh] pb-[3vh] overflow-y-scroll">
+									<div className="w-2/3 border-r-2 border-dashed h-full flex flex-col pt-0 pb-[3vh] overflow-y-scroll">
 										<h3 className="scribble-box text-[4vh] px-[2vw] mt-[2vh] border-b-2 border-dashed mb-[1vh]">
 											Previous Tasks
 										</h3>
@@ -142,7 +132,6 @@ export default function FAQ() {
 					</div>
 				</div>
 			)}
-			{/* <Chain /> */}
 		</div>
 	);
 }

@@ -148,7 +148,7 @@ export default function Chain() {
 					ref={(el) => {
 						if (el) segmentEls.current[i] = el;
 					}}
-					className="absolute h-[2px] border border-black rounded-full origin-left"
+					className="absolute h-0.5 border border-black rounded-full origin-left"
 					style={{ top: 0, left: 0 }}
 				/>
 			))}
@@ -159,13 +159,13 @@ export default function Chain() {
 					ref={(el) => {
 						if (el) pointEls.current[i] = el!;
 					}}
-					className="absolute w-[10px] h-[10px] rounded-full border-2 border-black"
+					className="absolute w-2.5 h-2.5 rounded-full border-2 border-black"
 					style={{ left: 0, top: 0 }}
 				/>
 			))}
 
 			<div
-				className="absolute w-[14px] h-[14px] border-4 border-black rounded-full"
+				className="absolute w-3.5 h-3.5 border-4 border-black rounded-full"
 				style={{
 					left: "50%",
 					top: "80px",
