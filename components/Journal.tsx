@@ -66,7 +66,7 @@ export default function Journal() {
 	return (
 		<>
 			{page == 1 && (
-				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black">
+				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black overflow-hidden">
 					<img
 						rel="preload"
 						src="/imgs/journal-first.png"
@@ -127,8 +127,6 @@ export default function Journal() {
 						className="w-[16.9vw] absolute top-0 left-0 z-5"
 						alt=""
 					/>
-					{/* 					<div className="w-[13vw] h-[40vh] rounded-[1vh] bg-blue-200 absolute hover:left-[6vw] transition-all duration-250 ease-in-out top-[15vh] left-[2vw] z-6"></div>
-					 */}{" "}
 					<img
 						rel="preload"
 						src="/imgs/pocket-1.png"
@@ -365,10 +363,6 @@ export default function Journal() {
 										Table of Contents
 									</motion.h1>
 
-									{/* <div className="flex items-center justify-between border-b border-black/40 py-[0.5vh]">
-										<p className="hand-coffe text-[2.25vh]">Content</p>
-										<p className="hand-coffe text-[2.25vh]">Page</p>
-									</div> */}
 									<motion.div
 										className="flex items-center justify-between border-b border-black/40 py-[0.5vh]"
 										variants={item}

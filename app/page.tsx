@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Journal from "@/components/Journal";
 import FAQ from "@/components/FAQ";
+import Clock from "@/components/Clock";
 
 export default function Home() {
 	const total_pages: number = 3;
@@ -31,8 +32,9 @@ export default function Home() {
 
 	return (
 		<div className="bg-black h-screen w-full">
-			<div className="h-screen w-screen bg-black relative overflow-x-hidden overflow-y-hidden">
-				<div className="bg-yellow-900/15 w-screen h-screen"></div>
+			<div className="h-screen w-screen bg-neutral-800/80 relative overflow-x-hidden overflow-y-hidden">
+				<div className="bg-yellow-950/15 w-screen h-screen"></div>
+				<Clock />
 				<Journal />
 				<FAQ />
 			</div>
