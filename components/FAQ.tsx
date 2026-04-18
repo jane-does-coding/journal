@@ -10,7 +10,6 @@ export default function FAQ() {
 
 	return (
 		<div className="">
-			{/* OPEN BUTTON */}
 			<button
 				onClick={() => setIsOpen(!isOpen)}
 				className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vh] hand-coffe text-[5vh] leading-[5vh] z-[99]"
@@ -18,9 +17,8 @@ export default function FAQ() {
 				?
 			</button>
 
-			{/* BACKDROP */}
 			<div
-				className={`w-full h-screen fixed top-0 left-0 bg-neutral-900/10 backdrop-blur-[3px]
+				className={`w-full h-screen fixed top-0 left-0 bg-neutral-700/10 backdrop-blur-[3px]
 				transition-all duration-500 ease-out
 				${
 					isOpen
@@ -28,14 +26,12 @@ export default function FAQ() {
 						: "opacity-0 pointer-events-none"
 				}`}
 			>
-				{/* MODAL WRAPPER */}
 				<div
 					className={`fixed top-1/2 left-1/2 -translate-x-1/2 w-[50vw]
 					flex flex-col items-center justify-center gap-0
 					transition-all duration-500 ease-out
 					${isOpen ? "-translate-y-1/2 opacity-100" : "-translate-y-[40%] opacity-0"}`}
 				>
-					{/* TOP HEADER */}
 					<div className="border-dashed border-2 bg-amber-50 h-fit w-full flex flex-col transition-all duration-500 ease-out">
 						<div className="flex border-b-2 border-dashed py-[1.5vh] px-[1vw] gap-[1vw] items-center justify-center">
 							<p className="hand-coffe text-[2.25vh]">3/10</p>
@@ -58,7 +54,6 @@ export default function FAQ() {
 						</div>
 					</div>
 
-					{/* TABS (DELAY 100ms) */}
 					<div
 						className={`mt-[2vh] w-full gap-[0.75vw] flex items-end justify-start h-[8vh]
 						transition-all duration-500 ease-out
@@ -90,7 +85,6 @@ export default function FAQ() {
 						</button>
 					</div>
 
-					{/* MAIN CONTENT (DELAY 200ms) */}
 					<div
 						className={`border-dashed border-2 bg-amber-50 h-[55vh] w-full
 						transition-all duration-500 ease-out
@@ -111,7 +105,7 @@ export default function FAQ() {
 										events.
 									</p>
 
-									<div className="py-[1vh] hover:h-[28vh] h-[8vh] overflow-hidden border-t-2 border-dashed duration-500 transition-all ease-in-out mt-auto">
+									<div className="py-[1vh] hover:h-[28vh] h-[8vh] overflow-hidden border-t-2 border-dashed duration-400 transition-all ease-in-out mt-auto">
 										<p className="text-[2.5vh] hand-coffe px-[1vw] py-[1vh] text-right">
 											Help ?
 										</p>
@@ -145,7 +139,6 @@ export default function FAQ() {
 								</div>
 							)}
 
-							{/* SIDE IMAGE */}
 							<div className="w-1/3 h-full flex items-center justify-center">
 								<img
 									src="/imgs/memories.png"

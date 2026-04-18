@@ -66,7 +66,7 @@ export default function Journal() {
 	return (
 		<>
 			{page == 1 && (
-				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black overflow-hidden">
+				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black/0 overflow-hidden">
 					<img
 						rel="preload"
 						src="/imgs/journal-first.png"
@@ -94,7 +94,7 @@ export default function Journal() {
 						onClick={() =>
 							setSelectedItem(selectedItem == "dollar" ? null : "dollar")
 						}
-						className={` transition-all duration-350 ease-in-out absolute drop-shadow-2xl drop-shadow-black z-2 cursor-pointer ${
+						className={` transition-all duration-350 ease-in-out absolute drop-shadow-2xl drop-shadow-black/0 z-2 cursor-pointer ${
 							selectedItem === "dollar"
 								? "left-[40%] top-[15%] rotate-0 w-[18vw] hover:scale-[98%]"
 								: "rotate-90  left-[10vw] hover:left-[15vw] w-[13vw] top-[-3vh] "
@@ -115,7 +115,7 @@ export default function Journal() {
 						onClick={() =>
 							setSelectedItem(selectedItem == "picture" ? null : "picture")
 						}
-						className={`transition-all duration-350 ease-in-out absolute drop-shadow-xl drop-shadow-black z-6 cursor-pointer ${
+						className={`transition-all duration-350 ease-in-out absolute drop-shadow-xl drop-shadow-black/0 z-6 cursor-pointer ${
 							selectedItem === "picture"
 								? "left-[33%] top-[20%] rotate-0 hover:scale-[98%] h-[48vh]"
 								: "rotate-90  top-[23vh] left-[1vw] hover:left-[5vw] h-[36vh]"
@@ -204,7 +204,7 @@ export default function Journal() {
 				</div>
 			)}
 			{page == 2 && (
-				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black">
+				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black/0">
 					<img
 						rel="preload"
 						src="/imgs/journal-open.png"
@@ -505,7 +505,7 @@ export default function Journal() {
 				</div>
 			)}
 			{page == 3 && (
-				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black">
+				<div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] drop-shadow-2xl drop-shadow-black/0">
 					<img
 						rel="preload"
 						src="/imgs/journal-last.png"

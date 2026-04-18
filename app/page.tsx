@@ -6,11 +6,6 @@ import FAQ from "@/components/FAQ";
 import Clock from "@/components/Clock";
 
 export default function Home() {
-	const total_pages: number = 3;
-	const [page, setPage] = useState(1);
-	const [selectedItem, setSelectedItem] = useState<string | null>(null);
-	const [isFading, setIsFading] = useState(false);
-
 	useEffect(() => {
 		const images = [
 			"/imgs/journal-first.png",
@@ -32,7 +27,7 @@ export default function Home() {
 
 	return (
 		<div className="bg-black h-screen w-full">
-			<div className="h-screen w-screen bg-neutral-800/80 relative overflow-x-hidden overflow-y-hidden">
+			<div className="h-screen w-screen bg-neutral-50/90 relative overflow-x-hidden overflow-y-hidden">
 				<div className="bg-yellow-950/15 w-screen h-screen"></div>
 				<Clock />
 				<Journal />
