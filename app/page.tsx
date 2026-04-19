@@ -31,6 +31,7 @@ export default function Home() {
 				<div className="bg-yellow-950/15 w-screen h-screen"></div>
 				<Clock />
 				<Journal />
+
 				<FAQ />
 			</div>
 		</div>
