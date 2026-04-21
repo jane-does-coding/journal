@@ -27,9 +27,19 @@ export default function Home() {
 
 	return (
 		<div className="bg-black h-screen w-full">
-			<div className="h-screen w-screen bg-neutral-50/90 relative overflow-x-hidden overflow-y-hidden">
+			<div className="h-screen w-screen bg-neutral-200/90 relative overflow-x-hidden overflow-y-hidden">
 				<div className="bg-yellow-950/15 w-screen h-screen"></div>
 				<Clock />
+				<img
+					src="/imgs/news-stand.png"
+					alt="idk"
+					className="w-[65vw] h-[90vh] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 "
+				/>
+				{/* 	<img
+					src="/imgs/journal-closed.png"
+					alt="idk"
+					className="w-[10vw] absolute bottom-[2vh] right-[2vh] hover:scale-[98%] transition-all ease-in-out duration-350 cursor-pointer "
+				/> */}
 				<Journal />
 				<FAQ />
 			</div>
