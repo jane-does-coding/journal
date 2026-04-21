@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 
-export default function Journal() {
+export default function Journal({ setCursorBoosted }: any) {
 	const [page, setPage] = useState(1);
 	const [selectedItem, setSelectedItem] = useState<string | null>(null);
 	const [isFading, setIsFading] = useState(false);
@@ -81,6 +81,8 @@ export default function Journal() {
 			<AnimatePresence>
 				{!isOpen && (
 					<motion.img
+						onMouseEnter={() => setCursorBoosted(true)}
+						onMouseLeave={() => setCursorBoosted(false)}
 						src="/imgs/journal-closed.png"
 						alt="journal"
 						onClick={() => setIsOpen(true)}

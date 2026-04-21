@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function FAQ() {
+export default function FAQ({ setCursorBoosted }: any) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [currentTab, setCurrentTab] = useState<"objective" | "previous">(
 		"objective"
@@ -11,6 +11,8 @@ export default function FAQ() {
 	return (
 		<div className="">
 			<button
+				onMouseEnter={() => setCursorBoosted(true)}
+				onMouseLeave={() => setCursorBoosted(false)}
 				onClick={() => setIsOpen(!isOpen)}
 				className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vh] hand-coffe text-[5vh] leading-[5vh] z-[99]"
 			>
