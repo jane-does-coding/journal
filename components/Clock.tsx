@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const Clock = () => {
+const Clock = ({ setCursorBoosted }: any) => {
 	const [timeOpen, setTimeOpen] = useState(false);
 	const [now, setNow] = useState(new Date());
 
@@ -33,6 +33,8 @@ const Clock = () => {
 			/>
 
 			<div
+				onMouseEnter={() => setCursorBoosted(true)}
+				onMouseLeave={() => setCursorBoosted(false)}
 				onClick={() => setTimeOpen(!timeOpen)}
 				className={`absolute z-50 transition-all ease-in-out duration-350 cursor-pointer drop-shadow-2xl drop-shadow-black/0 ${
 					timeOpen
