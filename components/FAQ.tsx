@@ -36,9 +36,9 @@ export default function FAQ({ setCursorBoosted }: any) {
 				>
 					<div className="border-dashed border-2 bg-amber-50 h-fit w-full flex flex-col transition-all duration-500 ease-out">
 						<div className="flex border-b-2 border-dashed py-[1.5vh] px-[1vw] gap-[1vw] items-center justify-center">
-							<p className="hand-coffe text-[2.25vh]">3/10</p>
+							<p className="hand-coffe text-[2.25vh]">1/10</p>
 							<div className="h-[2.5vh] w-full bg-neutral-500/30 rounded-full">
-								<div className="w-[30%] bg-neutral-900 h-full rounded-full"></div>
+								<div className="w-[10%] bg-neutral-900 h-full rounded-full"></div>
 							</div>
 						</div>
 
