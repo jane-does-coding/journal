@@ -14,7 +14,7 @@ export default function FAQ({ setCursorBoosted }: any) {
 				onMouseEnter={() => setCursorBoosted(true)}
 				onMouseLeave={() => setCursorBoosted(false)}
 				onClick={() => setIsOpen(!isOpen)}
-				className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vh] hand-coffe text-[5vh] leading-[5vh] z-[99]"
+				className="border-2 border-dashed h-[7vh] w-[7vh] fixed bg-amber-50 top-[2vh] right-[2vh] hand-coffe text-[5vh] leading-[5vh] z-99"
 			>
 				?
 			</button>
@@ -86,7 +86,6 @@ export default function FAQ({ setCursorBoosted }: any) {
 							<p className="hand-coffe text-[2.5vh]">Previous Tasks</p>
 						</button>
 					</div>
-
 					<div
 						className={`border-dashed border-2 bg-amber-50 h-[55vh] w-full
 						transition-all duration-500 ease-out

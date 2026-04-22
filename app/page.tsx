@@ -105,7 +105,7 @@ export default function Home() {
 									damping: 20,
 								},
 							}}
-							className="fixed pointer-events-none z-[999] px-4 py-2 bg-amber-50 border-2 border-dashed text-black hand-coffe text-[2vh] font-medium shadow-lg rounded-md whitespace-nowrap"
+							className="fixed pointer-events-none z-999 px-4 py-2 bg-amber-50 border-2 border-dashed text-black hand-coffe text-[2vh] font-medium shadow-lg rounded-md whitespace-nowrap"
 							style={{
 								left: smoothedMouse.x,
 								top: smoothedMouse.y - 30,

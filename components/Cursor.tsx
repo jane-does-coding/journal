@@ -12,7 +12,6 @@ export default function Cursor({
 	const mouseX = useMotionValue(0);
 	const mouseY = useMotionValue(0);
 
-	// smooth / stretchy motion
 	const springX = useSpring(mouseX, {
 		stiffness: 200,
 		damping: 20,
@@ -36,7 +35,7 @@ export default function Cursor({
 
 	return (
 		<motion.div
-			className="fixed top-0 left-0 pointer-events-none z-[998]
+			className="fixed top-0 left-0 pointer-events-none z-998
 				w-[2.5vh] h-[2.5vh] bg-amber-50 border border-dashed rounded-full"
 			animate={{
 				scale: boosted ? 1.7 : 1,
