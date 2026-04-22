@@ -13,12 +13,12 @@ export default function Cursor({
 	const mouseY = useMotionValue(0);
 
 	const springX = useSpring(mouseX, {
-		stiffness: 200,
-		damping: 20,
+		stiffness: 2000,
+		damping: 80,
 	});
 	const springY = useSpring(mouseY, {
-		stiffness: 200,
-		damping: 20,
+		stiffness: 2000,
+		damping: 80,
 	});
 
 	useEffect(() => {

@@ -61,7 +61,7 @@ export default function Home() {
 
 	return (
 		<div className="bg-black h-screen w-full">
-			<Cursor boosted={cursorBoosted} hidden={hoveringStand} />
+			<Cursor boosted={cursorBoosted} hidden={hoveringStand} />{" "}
 			<div
 				className={`h-screen w-screen bg-neutral-200/90 relative overflow-x-hidden overflow-y-hidden ${
 					hoveringStand ? "cursor-none" : ""
@@ -95,13 +95,13 @@ export default function Home() {
 								scale: {
 									duration: 0.2,
 									type: "spring",
-									stiffness: 300,
+									stiffness: 800,
 									damping: 20,
 								},
 								y: {
 									duration: 0.2,
 									type: "spring",
-									stiffness: 300,
+									stiffness: 800,
 									damping: 20,
 								},
 							}}
